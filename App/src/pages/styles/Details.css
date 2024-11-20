@@ -1,0 +1,25 @@
+.details-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .details-container h1 {
+    color: #333;
+  }
+  
+  .details-container p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+.back-button{
+  border: #333;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 5px;
+}
+
+.back-button:hover{
+  background-color: #063f7a;
+}
+  
