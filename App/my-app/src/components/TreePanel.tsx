@@ -98,8 +98,15 @@ const TreePanel: React.FC<TreePanelProps> = ({ data }) => {
     ));
   };
 
+  const role = "Admin";  
+
   return (
     <div className="tree-container">
+      {/* Display Role Information */}
+      <div className="role-info">
+        <p>Role: <strong>{role}</strong></p>
+      </div>
+
       {renderTree(data)}
     </div>
   );
