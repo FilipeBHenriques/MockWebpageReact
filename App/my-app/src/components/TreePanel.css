@@ -1,0 +1,53 @@
+/* TreePanel.css */
+
+/* Container for the tree */
+.tree-container {
+    font-family: monospace; /* Use monospace font to give it a "console" feel */
+    padding: 10px;
+}
+
+/* Style for each tree node (region, site, activity, etc.) */
+.tree-node {
+    margin-left: 20px;
+}
+
+/* Style for each tree item (the clickable part) */
+.tree-item {
+    cursor: pointer;
+    padding: 5px;
+    margin: 3px 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Hover effect for tree items */
+.tree-item:hover {
+    background-color: #e2f0fb;
+}
+
+/* Add lines between items to resemble the console tree */
+.tree-child {
+    margin-left: 20px; /* Indentation for child nodes */
+}
+
+/* Add the bold styling for region names */
+.tree-item.region {
+    font-weight: bold; /* Make the region name bold */
+}
+
+/* Remove any vertical lines (no hyphens or vertical lines before the items) */
+.tree-item::before {
+    content: none; /* Prevent hyphens or lines */
+    display: none; /* Hide the lines */
+}
+
+/* Prevent any other unwanted lines in the tree */
+.tree-child .tree-item::before {
+    content: none; /* Remove lines before child items */
+}
+
+/* Ensure that the first child doesn’t have unnecessary margin */
+.tree-node .tree-item:first-child {
+    margin-top: 10px;
+}

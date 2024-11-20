@@ -1,0 +1,264 @@
+/* App.css */
+
+/* Overall container for the app */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f0f0f0; /* Main background color */
+}
+
+/* Header style */
+.app-header {
+  display: flex;
+  align-items: center;
+  background-color: white; /* White background for the header */
+  padding: 10px;
+  color: #333;
+  font-size: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow to separate it from content */
+  justify-content: space-between;
+  width: 100%; /* Ensure header stretches across the full width */
+}
+
+/* Header left (circular icon) */
+.header-left .circular-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(255, 183, 0); /* Yellow circular icon */
+  margin-right: 30px; /* Increased space between the left circle and buttons */
+}
+
+/* Header buttons (5 buttons in the header) */
+.header-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1; /* This ensures the buttons take up the available space */
+}
+
+.header-buttons button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.header-buttons button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Header right (search bar and profile picture) */
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-left: 30px; /* Increased space between the buttons and profile picture */
+}
+
+.search-bar {
+  padding: 5px;
+  margin-right: 10px;
+}
+/* App.css */
+
+/* Profile image container */
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Circle shape */
+  margin-right: 10px;
+  background-color: #f0f0f0; /* Default background color (light gray) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #ccc; /* Light border around the profile */
+  font-size: 18px; /* Adjust font size for the initials */
+  color: #777; /* Default color for initials */
+}
+
+/* Default profile icon (person silhouette) */
+.profile-img::before {
+  content: "👤"; /* Use a person emoji as the default icon */
+  font-size: 30px; /* Size of the emoji */
+  color: #aaa; /* Light gray color for the icon */
+}
+
+/* Profile image hover effect */
+.profile-img:hover {
+  background-color: #e2e2e2; /* Darker background color on hover */
+  border: 1px solid #bbb; /* Darker border on hover */
+}
+
+
+.profile-pic {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Horizontally center the profile circle */
+  align-items: center; /* Vertically center the profile circle */
+  margin-left: 30px; /* Space between the buttons and profile picture */
+}
+
+/* Style for the back button */
+.back-button-container {
+  margin: 20px 0; /* Add some space above and below the button */
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  padding-left: 20px; /* Ensure it's properly aligned from the left */
+}
+
+.back-button {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  background: none;
+  border: none; /* Remove the border */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* On hover, change the background color */
+.back-button:hover {
+  background-color: white; /* Background color on hover */
+}
+
+
+
+.dropdown-menu button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 100px;
+  padding: 10px;
+}
+
+.dropdown-menu:hover .dropdown-content {
+  display: block;
+  background-color: white;
+}
+
+/* Dropdown menu items */
+.dropdown-content p {
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Hover effect for dropdown menu items */
+.dropdown-content p:hover {
+  background-color: #f0f0f0; /* Light grey background on hover */
+  color: #333; /* Text color when hovered */
+}
+
+/* Main content layout */
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  height: calc(100vh - 60px); /* Adjust based on header height */
+  padding: 20px; /* Some padding for spacing around */
+  background-color: #f0f0f0; /* Grey background color */
+}
+
+/* Left Section (70% width) */
+.left-section {
+  width: 70%; /* 70% of the width */
+  background-color: #ffffff; /* White background for the left section */
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid #ddd; /* Border around the left section */
+  border-radius: 8px; /* Rounded corners */
+  margin-right: 20px; /* Space between left and right sections */
+}
+
+/* Right Section (Tree Panel, 30% width) */
+.right-section {
+  width: 30%; /* 30% of the width */
+  padding: 20px;
+  background-color: #ffffff;
+  border-left: 2px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; /* Rounded corners */
+  overflow-y: auto;
+}
+
+/* For tree panel (optional styles for better view) */
+.tree-container {
+  padding: 10px;
+  font-family: monospace; /* Use monospace font to give it a "console" feel */
+}
+
+/* Tree node (region, site, activity) styles */
+.tree-node {
+  margin-left: 20px;
+}
+
+.tree-item {
+  cursor: pointer;
+  padding: 5px;
+  margin: 3px 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.tree-item:hover {
+  background-color: #e2f0fb;
+}
+
+.tree-child {
+  margin-left: 20px; /* Indentation for child nodes */
+}
+
+/* Add the bold styling for region names */
+.tree-item.region {
+  font-weight: bold; /* Make the region name bold */
+}
+
+/* Additional styles for the lines */
+.tree-item::before {
+  content: "";
+  display: inline-block;
+  width: 15px; /* Width of the line */
+  height: 1px;
+  background-color: #333;
+  margin-right: 5px;
+}
+
+.tree-item:last-child::before {
+  width: 8px; /* Make the last item line shorter */
+}
+
+/* Customize specific lines for "├──" and "└──" */
+.tree-item {
+  position: relative;
+}
+
+.tree-item:before {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tree-node .tree-item:first-child {
+  margin-top: 10px;
+}
+
+.tree-child .tree-item:first-child::before {
+  border-top: none;
+}
